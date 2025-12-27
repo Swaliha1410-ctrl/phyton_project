@@ -19,7 +19,6 @@ class Coffee:
             size = int(input('\nHow many coffees would you like to buy? '))
             for i in range(size):
                 while True:
-                    # Convert input to lowercase to match dictionary keys
                     choice = input(f'Enter flavour for coffee #{i+1} ☕: ').lower().strip()
                     if choice in self.menu_items:
                         self.order_items.append(choice.title())
@@ -43,7 +42,6 @@ class Coffee:
         
         subtotal = sum(self.order_prices)
         
-        # Fixed the indexing bug using enumerate
         for index, (item, price) in enumerate(zip(self.order_items, self.order_prices), 1):
             print(f'{index}. {item:<15} ₹{price}')
         
@@ -90,4 +88,5 @@ class Coffee:
                 print('Kindly enter a valid choice (1-4)')
 
 c1 = Coffee()
+
 c1.start()
