@@ -26,8 +26,8 @@ class Coffee:
                         print(f"Added {choice.title()} to cart.")
                         break
                     else:
-                        print('❌ This coffee is not available. Please check the menu.')
-            print('--- Order Added ✅ ---')
+                        print('This coffee is not available. Please check the menu.')
+            print('--- Order Added !!! ---')
         except ValueError:
             print("Invalid input. Please enter a number for the quantity.")
 
@@ -90,3 +90,4 @@ class Coffee:
 c1 = Coffee()
 
 c1.start()
+
